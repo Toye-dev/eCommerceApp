@@ -16,6 +16,10 @@ html, body, #root {
   background-color: #f1eff0;
 }
 
+html {
+  padding-top: 5px;
+}
+
 @font-face {
   font-family: 'Kabel'; 
   src: url('/KabelITCbyBT-Book.woff') format('woff');
@@ -43,6 +47,12 @@ html, body, #root {
   overflow-x: hidden;
   padding-bottom: 1px;
 }
+
+.noScroll .rootBody {
+  overflow: hidden;
+  height: 100vh;
+}
+
 
 .logoSection {
   width: 100%;
