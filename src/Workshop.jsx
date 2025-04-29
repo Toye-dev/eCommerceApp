@@ -9,13 +9,13 @@ const Workshop = () => {
                 </div>
                 
                 <div className="firstImg">
-                    <img src="public/homepageCakes/WorkShopBackground.png" />
+                    <img src="/homepageCakes/WorkShopBackground.png" />
                     <p className="craftText">CRAFT</p>
                     <div className="slashAcross"></div>
                 </div>
             </div>
             <div className="secondImg">
-                <img src="public/homepageCakes/BackgroundTiers.png"/>
+                <img src="/homepageCakes/BackgroundTiers.png"/>
                 <div className="slash"> <p className="studioText">
                     T <br />H<br />E<br /><br /> S<br />T<br />U<br />D<br />I<br />O
                 </p></div>

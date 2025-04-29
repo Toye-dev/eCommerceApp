@@ -81,9 +81,9 @@ const Cart = () => {
                     
                     <p className='paymethods'>Accepted Payment Methods</p>
                     <div className="payment"> 
-                        <img className="visacard" src="public/homepageCakes/visa-svgrepo-com.svg" />
-                        <div className="mCard"> <img className="mastercard" src="public/homepageCakes/mastercard-2-logo-svgrepo-com.svg" /></div>
-                        <img className="paypal" src="public/homepageCakes/paypal-3-svgrepo-com (1).svg" />
+                        <img className="visacard" src="/homepageCakes/visa-svgrepo-com.svg" />
+                        <div className="mCard"> <img className="mastercard" src="/homepageCakes/mastercard-2-logo-svgrepo-com.svg" /></div>
+                        <img className="paypal" src="/homepageCakes/paypal-3-svgrepo-com (1).svg" />
                     </div>
                 </div>
             </div>

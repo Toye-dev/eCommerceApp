@@ -106,7 +106,7 @@ function Root() {
           </Formik>
 
           <div className="studioFlower">
-            <img src="public/homepageCakes/Flower-3.png"></img>
+            <img src="/homepageCakes/Flower-3.png"></img>
           </div>
           <p className='copyright'>Copyright © 2025 Tomiiwo Oke. All rights reserved.</p>
 

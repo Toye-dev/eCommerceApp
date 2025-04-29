@@ -72,7 +72,7 @@ const Home = () => {
                     
                     <Link to="/about"><button className='button'>About</button></Link>
                 </div>
-                <img className="portrait" src='public/homepageCakes/Fifi.png'/>
+                <img className="portrait" src='/homepageCakes/Fifi.png'/>
                 <div className="designBox"><h2 className="heading">Approaching the process</h2></div> 
             </div>
 
