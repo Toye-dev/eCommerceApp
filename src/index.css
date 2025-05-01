@@ -1955,6 +1955,7 @@ input {
   justify-content: center;
   margin: auto;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .aboutPage h1 {
