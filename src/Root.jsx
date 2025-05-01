@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import NavDrop from './NavDrop';
 import { useState, useEffect } from 'react';
 import { AppContext } from './AppContext';
@@ -9,7 +10,7 @@ import { useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom"
-import { AnimatePresence, motion } from 'framer-motion';
+import { useMediaQuery } from "react-responsive";
 
 // For freezing the scroll, useState wont work, because this has to be done on the body
 // Acessing the body is like accessing an external api like nasa. React has no access like vanilla js.
@@ -20,6 +21,7 @@ function Root() {
 
   const { navDrop, handleNavHide, handleNavView, cart} = useContext(AppContext)
   const [ isSubmitted, setIsSubmitted ] = useState(false);
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 720px)" });
 
   useEffect(() => {
     if (navDrop) {
@@ -40,31 +42,91 @@ function Root() {
               <p className="bottom">- since <span className="logoYear">2020</span> -</p>
             </div>
           </div>
+          { isLargeScreen ? (
+            <>
+              <div className="largeScreenNav">
+              
+                <Link   
+                  to="/" 
+                  style={{textDecoration: 'none', color: '#dcc7b2ee'}}
+                >
+                  <div className="menuItem">                
+                    <span className="text">HOME</span>
+                  </div>
+                </Link>
 
-          <div className="navSection">
-            <div
-              className={`icon cancel ${navDrop ? "show" : "hide"}`}
-              onClick={handleNavHide}
-            >
-              ✖
-            </div>
+                <Link 
+                  to="about"
+                  style={{textDecoration: 'none', color: '#dcc7b2'}}
+                >
+                  <div className="menuItem">
+                    <span className="text">ABOUT</span>
+                  </div>
+                </Link>
 
-            <FontAwesomeIcon
-              icon={faBars}
-              className={`icon bars ${!navDrop ? "show" : "hide"}`}
-              onClick={handleNavView}
-            />
-            
+                <Link 
+                  to="workshop" 
+                  style={{textDecoration: 'none', color: '#dcc7b2ee'}}
+                >
+                  <div className="menuItem">
+                    <span className="text">WORKSHOPS</span>
+                  </div>
+                </Link>
+                
+                <div className="menuItem">
+                  <a 
+                    href="https://www.instagram.com/tomiescakes/"  
+                    target="_blank" 
+                    rel="noopener noreferrer" >
+                    <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '19px', color: " #ce8989" }} />
+                  </a>
+                </div>
+              
+                <div className="menuItem">
+                  <span className="contact">
+                    <a href="tel:09033935376" style={{textDecoration: 'none', color: '#8f7f6e', fontSize: "14px"}}><span className="tel">tel: </span>
+                      +234 903 393 5376
+                    </a>
+                  </span>
+                </div>
+              </div>
               <div className="counter">{cart.reduce((total, item) => total + item.quantity, 0)}</div>
               <Link to="cart">
                 <FontAwesomeIcon
                   icon={faShoppingCart}
-                  className={`shoppingCart ${navDrop ? 'hidden' : "show"}`}
+                  className="shoppingCart"
                 />
               </Link>
-            
-            <NavDrop />
-          </div>
+          
+            </>
+          ) : (
+            <>
+              <div className="navSection">
+                <div
+                  className={`icon cancel ${navDrop ? "show" : "hide"}`}
+                  onClick={handleNavHide}
+                >
+                  ✖
+                </div>
+
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className={`icon bars ${!navDrop ? "show" : "hide"}`}
+                  onClick={handleNavView}
+                />
+                
+                <div className="counter">{cart.reduce((total, item) => total + item.quantity, 0)}</div>
+                <Link to="cart">
+                  <FontAwesomeIcon
+                    icon={faShoppingCart}
+                    className={`shoppingCart ${navDrop ? 'hidden' : "show"}`}
+                  />
+                </Link>
+                
+                <NavDrop />
+              </div>
+            </>
+          )}
         </nav>
 
         <main>

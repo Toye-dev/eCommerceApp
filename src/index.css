@@ -53,7 +53,6 @@ html {
   height: 100vh;
 }
 
-
 .logoSection {
   width: 100%;
   height: 90px;
@@ -194,11 +193,6 @@ html {
   overflow: hidden;
   transition: max-height 1s ease-in-out, opacity 1.5s ease-in-out;
   color: #dcc7b2c9;
-}
-
-.noScroll {
-  overflow: hidden;
-  height: 100vh;
 }
 
 .navDrop.active {
@@ -978,7 +972,7 @@ input::placeholder {
   flex-direction: row;
   gap: 5px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-top: -3px;
 }
 
@@ -1014,11 +1008,22 @@ input::placeholder {
 
 /* Workshop_______________________*/
 
+.workshopPage {
+  margin: auto;
+  max-width: 400px;
+ 
+}
+
 .topSection {
   display: flex;
   flex-direction: row;
   margin-top: 15px;
-  
+}
+
+.workshopLine {
+  border-bottom: 1px solid #c8a6a2;
+  width: 300px;
+  margin: auto;
 }
 
 .textWorkshop {
@@ -1085,10 +1090,7 @@ input::placeholder {
   margin-left: -60px;
 }
 
-
-
 /* About_______________________*/
-
 
 .about {
   width: 325px;
@@ -1243,4 +1245,868 @@ input::placeholder {
     margin-top: 35px;
     padding-top: 25px;
   }
+}
+
+@media (min-width: 720px) {
+  
+  nav {
+    position: relative;
+  }
+
+.logoSection {
+  height: 150px;
+}
+
+.logo {
+  margin-top: 0px;
+  position: relative;
+}
+
+.center {
+  font-size: 50px;
+  margin-top: -10px;
+}
+
+.top {
+  font-size: 9px;
+  letter-spacing: 6px;
+}
+
+.bottom {
+  font-size: 10px;
+  margin-top: 7px;
+}
+
+.logoYear {
+  font-size: 10px;
+}
+
+.largeScreenNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  top: 140px;
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+}
+
+.text {
+  font-size: 14px;
+  color: #8f7f6e;
+}
+
+.menuItem a {
+  margin-bottom: -27px;
+  color: #53493d;
+}
+
+.tel {
+  color:#f3a3a3;
+  text-shadow:  0px 0px .5px;
+  font-size: 14px;
+}
+
+.counter {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: #ce8989cc;
+  right: 52px;
+  top: 160px;
+  font-size: 10px;
+  padding-top: 0px;
+}
+
+.shoppingCart {
+  padding: 20px;
+  /*color: #5f543c;*/
+  color: rgba(91, 80, 69, 0.779);
+  position: absolute;
+  right: 10px;
+  top: 152px;
+  font-size: 18px;
+}
+
+.shoppingCart:hover {
+  color:#c1b39b;
+}
+
+.homeContainerL {
+  max-width: 1500px;
+  height: 580px;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+}
+
+.imgContainer1 {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(
+    70deg,
+    #393836 2%,
+    #d1cac1 90%
+  );
+}
+
+.imgContainer1 img {
+  height: 80%;
+}
+
+.imgContainer2 {
+  width: 380px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(
+    70deg,
+    #4c4e47 40%,
+    #68767e 80%
+  );
+  position: relative;
+}
+
+.imgContainer2 img {
+  height: 80%;
+  margin-bottom: 48px;
+  margin-right: 25px;
+  animation: zoomPan 20s ease-in-out infinite;
+}
+
+
+.textOverlay {
+  position: absolute;
+  background-color: #c9afa3d4;
+  margin-right: 45px;
+}
+
+.textContent > h1 {
+  color: #4b3f26;/*#505151;*/
+}
+
+
+.subText {
+  color: #302716; /*#505151;*/
+}
+
+.subText > span {
+  color: #251f12c9;
+}
+
+.author {
+  color: #4f472b;
+}
+
+.textContent {
+  border: 2px solid rgba(131, 115, 115, 0.811);
+  padding: 8px;
+}
+
+
+.box {
+  width: 220px;
+  height: 60px;
+  background-color: #f1eff0;;
+  position: absolute;
+  Z-index: 1;
+}
+
+.button.largeScreen {
+  z-index: 1000;
+  position: absolute;
+  width: 129px;
+  height: 42px;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+}
+
+.imgContainer3 {
+  
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(
+    300deg,
+    #524949 5%,
+    #d7d4d1 90%
+  );
+}
+
+
+.imgContainer3 img {
+  height: 80%;
+  margin-bottom: -5px;
+}
+
+@keyframes zoomPan {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-10px, -10px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+
+.horizontalL {
+  margin: auto;
+  /*margin-bottom: 90px;*/
+  border-top: 1.5px solid #5c554636;
+  border-left: 1.5px solid #5c554636;
+  border-bottom: 1.5px solid #5c554636;
+  background-color: #f1eff0;
+  height: 646px;
+  margin-top: 44px;
+  min-width: 98vw;
+  padding-top: 50px;
+}
+
+.secondContainer{
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  padding-right: 40px;
+}
+
+.portraitsect {
+  display: flex;
+  max-width: 900px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+ 
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 8px;
+  height: 490px;
+  z-index: 1;
+  background: linear-gradient(
+    50deg,
+    #95978b 15%,
+    #606452 70%
+  );
+  padding: 40px;
+  padding-top: 95px;
+  position: relative;
+  max-width: 600px;
+}
+
+.textBox > p {
+ letter-spacing: .3px;
+ font-size: 13px;
+ color: #ded5d1;
+ text-align: justify;
+ text-justify: inter-word;
+ max-width: 150px;
+ margin: auto;
+ z-index: 10001;
+ position: relative;
+}
+
+.button.about{
+  width: 129px;
+  height: 42px;
+  font-size: 9px;
+  margin-top: 35px;
+}
+
+.heading {
+  color: #958B80;
+  font-family: 'shelleyvolante';
+  font-weight: 100;
+  margin-top: -27px;
+  margin: auto;
+  margin-bottom: -30px;
+  font-size: 30px; 
+  text-align: center;
+}
+
+.studio {
+  font-size: 18px;
+}
+
+.portrait {
+  object-fit: contain;
+  height: 537px;
+  overflow-x: hidden;
+  margin-top: 20px;
+  z-index: 1000;
+  position: absolute;
+  right: 23px;
+  bottom: -16px;
+}
+
+.designBox {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  height: 548.5px;
+  width: 300px;
+  border-top-left-radius: 3px;
+  border: 3px solid #ddbea96c; 
+}
+
+.footer {
+  height: 70vh;
+  margin-top: 0px;
+  padding-top: 55px;
+}
+
+.instagramLink {
+  font-size: 17px;
+}
+
+.footerHead {
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+.moreDetails {
+  font-size: 15px;
+  margin-bottom: 38px;
+  letter-spacing: .4px;
+  max-width: 800px;
+}
+
+.formText {
+  letter-spacing: .3px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.form > h2, p {
+  letter-spacing: .3px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 19px;
+}
+
+.form > p {
+  font-size: 14px;
+}
+
+input {
+  width: 340px;
+}
+
+.form > span {
+  display: block; 
+  text-align: center;
+  margin-bottom: -4px;
+}
+
+.form > .button {
+  width: 129px;
+  height: 42px;
+  font-size: 9px;
+}
+
+.copyright {
+  font-size: 11px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.instruction {
+  letter-spacing: .4px;
+  font-size: 15px;
+  margin-bottom: 55px;
+}
+
+.flexContainer {
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.pageTitle {
+  margin-top: 60px;
+  font-size: 23px;
+}
+
+/*Cart___________________________*/
+
+.cartPage {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  margin: auto;
+  margin-top: 100px;
+  max-width: 850px;
+}
+
+.cartHeader {
+  max-height: 100px;
+  width: 100px;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartContent {
+  display: flex;
+}
+
+.checkoutSect {
+  max-height: 400px;
+  margin-top: 17px;
+}
+
+.cartandCheckout > .oops {
+  min-width: 1000px;
+  text-align: center;
+  margin: auto;
+  padding-left: 40px;
+}
+
+.cartandCheckout h2 {
+  width: 600px;
+  font-size: 19px;
+}
+
+.oops p {
+  margin-bottom: 140px;
+  width: 600px;
+  color:#5e5440;
+  font-size: 15px;
+  text-align: center;
+}
+
+.cartTitle.workshop {
+  color: #59503fc8;
+  font-size: 23px;
+  margin-top: 10px;
+  font-weight: 700;
+  left: -10px;
+  top: 15px;
+  position: absolute;
+}
+
+.back {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  margin-left: 52px;
+  border: 2px solid #544d3da4;;
+  font-weight: bold;
+  border-radius: 50%;
+  color: #544d3d;/*#e8ded9;*/
+  position: static;
+  margin-top: -20px;
+}
+
+.back:hover {
+  border: 1.5px solid #978d75;
+}
+
+.back:active {
+  border: 1.5px solid #978d75;
+}
+
+.line {
+  width: 550px;
+  border-bottom: 1px solid #c8a6a2;
+  margin: auto;
+}
+
+.firstRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin: auto;
+  font-size: 12px;
+  width: 550px;
+  color: #59503f;
+}
+
+.firstRow p {
+  font-size: 13px;
+}
+
+.leftSide {
+  margin-left: 20px;
+}
+
+.otherRows {
+  padding: 5px;
+  font-size: 11px;
+  width: 550px;
+  margin: auto;
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+
+.otherRows p {
+  font-size: 12px;
+}
+
+.bottomline {
+  width: 550px;
+}
+
+.rightSideItem {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  font-family: helvetica;
+  color: #5e4f40;
+}
+
+.leftSideItem {
+  margin-left: 50px;
+  width: 120px;
+  height: 130px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.leftSideItem p {
+  font-size: 13px;
+  text-align: left;
+  color: #59503f;
+  padding-left: 3px;
+  padding-top: 10px;
+  min-width: 120px;
+}
+
+.leftSideItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+  margin-left: 3px;
+  background-color: rgb(249, 247, 247);
+}
+
+.checkoutSection {
+  width: 185px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 0px;
+  font-size: 11px;
+}
+
+.checkoutSection p {
+  font-size: 13px;
+}
+
+.checkoutSection .line {
+  width: 150px;
+  margin-right: 0px;
+  margin-bottom: 13px;
+  box-shadow: 0px 2px 4px rgb(152, 135, 114);
+}
+
+.checkOut {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.sectionItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.checkoutSection p {
+  text-align: right;
+  min-width: 60px;
+  margin-bottom: 3px;
+  color: #5e4f40;
+}
+
+.checkoutSection span {
+  font-family: helvetica;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 3px;
+  color: #5e4f40;
+  font-weight: bold;
+}
+
+.checkoutButton {
+  width: 138px;
+  height: 30px;
+  margin: auto;
+  margin-left: 0px;
+  border-radius: 1px;
+  border: none;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #aa501c;
+  color: white;
+  font-size: 8px;
+  text-transform: uppercase;
+  transition: background-color .4ms ease-in-out;
+  :pointer;
+}
+
+.checkoutButton:active {
+  background-color: #ac7250;
+  color: rgb(228, 221, 221);
+}
+
+.checkoutButton:hover {
+  background-color: #ac7250;
+  color: rgb(252, 247, 247);
+}
+
+.payment {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 0px;
+  margin-top: -3px;
+}
+
+.paymethods {
+  text-align: center;
+  font-weight: bold;
+  color: #342f26;
+  margin: auto;
+  padding-left: 0px;
+  font-size: 11px !important;
+}
+
+.mCard {
+  height: 29px;
+  margin-top: 5px;
+}
+
+.mastercard {
+  height: 80%;
+}
+
+.visacard {
+  height: 29px;
+  margin-left: 0px;
+}
+
+.paypal {
+  height: 35px;
+}
+
+
+/*about_______________________*/
+
+.aboutPage {
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.aboutPage h1 {
+  left: -160px;
+  top: 140px;
+  font-size: 24px;
+  color: #7a7466;
+}
+
+.aboutLine {
+  border-bottom: 1px solid #c8a6a2;
+  margin: auto;
+  min-width: 500px;
+}
+
+.imgandText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-top: 0px;
+}
+
+.weddingBack {
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.weddingBack img {
+  height: 100%;
+  bottom: 13px;
+  z-index: 10;
+}
+
+.aboutText {
+  max-width: 350px;
+  width: 200px;
+  font-size: 11px;
+  color: #3e382c;
+}
+
+.aboutBox {
+  height: 490px;
+  width: 280px;
+  border: 2.5px solid #ddbea96c;
+  position: absolute;
+  left: 350px;
+  top: 220px;
+  z-index: 0;
+}
+
+
+/*Workshop_______________________*/
+
+.workshopPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.workshopPage h1 {
+  left: -300px;
+  top: 30px;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+}
+
+.workshopLine {
+  border-bottom: 1px solid #c8a6a2;
+  width: 550px;
+  margin: auto;
+}
+
+.firstImg {
+  width: 180px;
+  height: 118px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.craftText {
+  bottom: -30px;
+  left: 19px;
+}
+
+.secondImg {
+  width: 300px;
+  height: 450px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+.studioText {
+  font-size: 35px;
+  color: #615d5653;
+  letter-spacing: 8px;
+  line-height: 1.1;
+}
+
+.slash {
+  height: 450px;
+  width: 30px;
+  background-color: #f1eff0;
+  margin-left: -60px;
+}
+
+/*finalPage______________________*/
+
+.finalPage {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.finalPage .back {
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 18px;
+}
+
+.finalPage .oops {
+  max-width: 1300px;
+  color: pink;
+  text-align: center;
+  margin: auto;
+}
+
+.finalPage h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+
+.finalPage p {
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
 }
